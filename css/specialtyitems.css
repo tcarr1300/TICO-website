@@ -1,0 +1,533 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* Easy Slider */ 
+
+.stext {
+	position: absolute; 
+	margin-top: -65px; 
+	width: 940px; 
+	padding: 20px 0px;
+	display: block; 
+	background: #333; 
+	opacity: 0.3; 
+	filter: alpha(opacity=30); 
+	font-size: 20px; 
+	color: #fff; 
+	text-decoration: none;
+	left:0px; 
+}
+
+#slider ul, #slider li,
+#slider2 ul, #slider2 li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#slider2{margin-top:1em;}
+#slider li, #slider2 li{ 
+	/* define width and height of list item (slide)
+		entire slider area will adjust according to the parameters provided here*/ 
+	
+	width:940px;
+	height:360px;
+	overflow:hidden; 
+	}	
+#prevBtn, #nextBtn,
+#slider1next, #slider1prev{ 
+	display:block;
+	width:30px;
+	height:77px;
+	position:absolute;
+	left:-35px;
+	top:150px;
+	z-index:1000;
+	}	
+#nextBtn, #slider1next{ 
+	left:938px;
+	}														
+#prevBtn a, #nextBtn a,
+#slider1next a, #slider1prev a{  
+	display:block;
+	position:relative;
+	width:40px;
+	height:77px;
+	background:url(../images/btn_prev.png) no-repeat 0 0;	
+	}	
+#nextBtn a, #slider1next a{ 
+	background:url(../images/btn_next.png) no-repeat 0 0;	
+	}	
+#nextBtn a:hover{ 
+	background:url(../images/btn_next_hov.png) no-repeat 0 0;	
+	}
+#prevBtn a:hover{ 
+	background:url(../images/btn_prev_hov.png) no-repeat 0 0;	
+	}
+
+
+/* boxes
+----------------------------------------------- */
+.box {
+	background:#c1c1c1;
+	padding:10px 10px 1px 10px;
+}
+
+.darkgrey .box {
+	border-right: 2px dotted #f15a22;
+	background: none;
+	padding:0px 10px 1px 10px;
+	margin-top: 20px;
+	font-size:12px;
+}
+.box h1 {
+	font-weight:600;
+	color:#333;
+	padding:30px 0 0 20px;
+	font-size:24px;
+}
+.box h2 {
+	font-size:1em;
+	font-weight:normal;
+	color:#fff;
+	background:#333;
+	padding:6px 12px;
+}
+.box h2 a,
+.box h2 a.visible {
+	color:#fff;
+	background:#333 url("../img/switch_minus.gif") 97% 50% no-repeat;
+	display:block;
+	padding:6px 12px;
+	margin:-6px -12px;
+	border:none;
+}
+.grid_4 .box h2 a {
+	background-position: 97% 50%;
+}
+.grid_5 .box h2 a {
+	background-position: 98% 50%;
+}
+.grid_12 .box h2 a {
+	background-position: 99% 50%;
+}
+
+
+.box h2 a.hidden,
+.box h2 a.hidden:hover {
+	background-image: url("../img/switch_plus.gif");
+}
+.box h2 a:hover {
+	background-color:#f15a22;
+}
+.block {
+	padding-top:10px;
+}
+
+
+
+/* paragraphs, quotes and lists
+----------------------------------------------- */
+
+blockquote {
+	font-family: arimo, sans-serif;
+	font-size:1.2em;
+	padding-left:1em;
+	border-left:4px solid #ccc;
+}
+blockquote cite {
+	font-size:.9em;
+}
+ul, ol {
+	padding-top:0;
+}
+
+
+/* top sub-navigation menu
+----------------------------------------------- */
+.topsubnav {
+	width:150px;
+	float:right;
+	margin:0 25px 0 0;
+}
+.topsubnav a {
+ 	display:block;
+	list-style:none;
+	font-size:13px;
+	color:#b1b1b1;
+	text-align:center;
+ }
+.topsubnav li {
+	margin:0;
+	padding:2px 3px;
+	margin-bottom: 10px;
+	border-bottom:1px solid #f15a22;
+	border-top:1px solid #f15a22;
+}
+.topsubnav li:hover, .topsubnav a:hover {
+	background-color: #999;
+	color: #333333;
+}
+.corplink {
+	width:180px;
+	float:right;
+	margin:10px 10px 10px 0;
+}
+.corplink a {
+ 	display:block;
+	list-style:none;
+	font-size:13px;
+	color:#f15a22;
+	text-align:center;
+ }
+.corplink li {
+	margin:0;
+	padding:2px 3px;
+	margin-bottom: 10px;
+	border-bottom:1px solid #f15a22;
+	border-top:1px solid #f15a22;
+}
+.corplink li:hover, .corplink a:hover {
+	background-color: #999;
+	color: #333333;
+}
+
+/* table
+----------------------------------------------- */
+table {
+	width:860px;
+	margin:10px auto;
+	border-collapse:collapse;
+}
+.tablesubhead {
+	font-size:16px;
+	padding-left:45px;
+	font-weight:600;
+	vertical-align:bottom;
+	border-right:none;
+	border-left:none;
+	background-color:#DDD;
+	text-align:center;
+}
+th {
+	font-size:14px;
+	font-weight:300;
+	text-transform:uppercase;
+	color:#fff;
+	background:#555;
+	border:1px solid #999;
+	vertical-align:middle;
+}
+td {
+	font-size:14px;
+	border:1px solid #999;
+	padding:2px 10px 2px 55px;
+	height:35px;
+	vertical-align:middle;
+	background-color:#FFF;
+	font-weight:600;
+}
+.standard {
+	background-image:url(../images/check1.png);
+	background-repeat:no-repeat;
+	background-position:30px 5px; 
+	background-color:#fea062;
+	padding-left:65px;
+	color:#333;
+	font-weight:900;
+}
+.optional {
+	background-color:#DDD;
+	padding:0;
+	text-align:center;
+	font-weight:300;
+}
+
+tfoot th,
+tfoot td {
+	border-top:2px solid #666;
+	background:#eee;
+}
+tfoot tr.total th,
+tfoot tr.total td {
+	border-top:6px double #666;
+}
+tfoot tr.total th {
+	text-transform:uppercase;
+}
+th.currency,
+td.currency {
+	text-align:right;
+}
+
+/* dealer locator tables
+----------------------------------------------- */
+.locator h2 {
+	font-size:18px;
+	font-weight:600;
+	text-align:center;
+	margin:50px 0 0 0;
+}
+.locator h5 {
+	font-size:11px;
+	text-align:center;
+	color:#FFF;
+	text-transform:uppercase;
+	background-color:#999;
+	padding:2px;
+	margin:-16px 20px 6px 20px;
+}
+.locator h4 {
+	font-size:14px;
+	color:#333;
+}
+.locator table {
+	width:860px;
+	margin:10px auto;
+	border-collapse:collapse;
+	margin-bottom:20px;
+}
+.locator th {
+	font-size:14px;
+	font-weight:600;
+	height:25px;
+	text-transform:uppercase;
+	color:#fff;
+	background:#555;
+	vertical-align:middle;
+}
+.locator td {
+	font-size:14px;
+	font-weight:300;
+	border:1px solid #999;
+	padding:22px 6px 15px 6px;
+	height:35px;
+	vertical-align:top;
+	text-align:center;
+	background-color:#FFF;
+	width:33.33%;
+}
+.locator a {
+	font-size:12px;
+	font-weight:300;
+	color:#f15a22;
+	display:block;
+	margin:6px 0 10px 0;
+}
+.locator a:hover {
+	color:#333;
+}
+
+/* forms
+----------------------------------------------- */
+form {
+	overflow:hidden;
+}
+fieldset {
+	position:relative;
+	margin-bottom:10px;
+}
+legend {
+	font-size:0.8em;
+	padding:.2em .8em;
+	background:#CCC;
+}
+fieldset.login p {
+	margin-bottom:1em;
+	margin-top:0pt;
+}
+fieldset p label {
+	width:98%;
+}
+fieldset p input {
+	width:98%;
+}
+fieldset p select {
+	width:99%;
+}
+fieldset.login p label {
+	float:left;
+	line-height:2em;
+	margin-right:3%;
+	text-align:right;
+	width:32%;
+}
+fieldset.login p input {
+	width:60%;
+}
+fieldset.login input.button {
+	margin-left:35%;
+}
+form p.notice {
+	font-weight:bold;
+}
+input.search.text {
+	width:66%;
+}
+input.search.button {
+	width:28%;
+	margin-left:2%;
+}
+
+
+/* articles
+----------------------------------------------- */
+.articles {
+	padding:0;
+}
+.articles h2 {
+	padding: 10px 0px 10px 30px;
+	font-size: 20px;
+	font-weight: 600;
+}
+.box .article {
+	padding:4px 10px 10px 10px;
+}
+.article h2 {
+	font-size:1.4em;
+	font-weight:normal;
+	text-transform:none;
+	color:#333;
+	background:transparent;
+	padding:0px;
+	margin:0;
+	border:none;
+}
+.article h3 {
+	margin-bottom:.2em;
+	font-size:1.6em;
+}
+.box .first {
+	border-top:none;
+}
+.article h4 {
+	font-size:1em;
+	color: #666;
+	margin-bottom:0.2em;
+	font-weight:400;
+}
+.article a.image {
+	float:left; 
+	margin:3px 10px 3px 0; 
+	padding:4px;
+	border:1px solid #bbb;
+	background:#fff;
+}
+.article a.image:hover {
+	border:1px solid #666;
+}
+.article a.image img {
+	float:left; 
+}
+.article p.meta {
+	color:#666;
+	padding:0px 20px 0px 500px;
+	font-style: italic;
+	text-indent: -16px;
+}
+
+
+/* site information
+----------------------------------------------- */
+#site_info .box {
+	color:#ccc;
+	background:#666;
+	margin-bottom:10px;
+}
+#site_info a {
+	color:#fff;
+}
+#site_info a:hover {
+	color:#000;
+}
+
+
+/* AJAX sliding shelf
+----------------------------------------------- */
+#loading {float:right; margin-right:14px; margin-top:-2px;}
+.block {padding-bottom:1px;}
+
+
+/* Accordian
+----------------------------------------------- */
+.toggler {
+	color: #222;
+	margin: 0;
+	padding: 2px 5px;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #f5f5f5;
+	border-left: 1px solid #f5f5f5;
+	font-size:1.1em;
+	font-weight: normal;
+}
+.element h4 {
+	margin: 0;
+	padding:4px;
+	line-height:1.2em;
+}
+.element p {
+	margin: 0;
+	padding: 4px;
+}
+.float-right {
+	padding:10px 20px;
+	float:right;
+}
+
+#accordian-block {
+	padding-bottom:10px;
+}
+
+
+/* Mootools Kwicks
+----------------------------------------------- */
+#kwick-box { 
+	padding:0;
+	overflow:hidden;
+}
+#kwick-box h2 { 
+	margin:0;
+}
+#kwick {
+	position: relative;
+}
+#kwick .kwicks {
+	display: block;
+	background: #999;
+	height: 120px;
+	list-style:none;
+	margin:0;
+	overflow:hidden;
+}
+#kwick li {
+	float: left;
+	margin:0;
+	padding:0;
+}
+#kwick .kwick {
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+	height: 100px;
+	width: 215px;
+	padding: 10px;
+	background: #fff;
+}
+#kwick .kwick span {
+	color:#fff;
+}
+#kwick .one {
+	background: #666;
+}
+#kwick .two {
+	background: #777;
+}
+#kwick .three {
+	background: #888;
+}
+#kwick .four {
+	background: #999;
+}
+/* ---------Modal-------------- */
