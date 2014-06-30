@@ -1,0 +1,40 @@
+/* adding sf-vertical class in addition to sf-menu creates a vertical menu */
+/* eg. <ul class="sf-menu sf-vertical"> ... */
+.sf-vertical {
+  width: 12em;
+  /* If you want the width of the closed menu to expand to its
+  widest top-level menu item (like its "Supersubs" submenus do),
+  replace the width rule above with the following two rules. */
+
+  /*
+  min-width: 12em;
+  *width: 12em;
+  */
+}
+.sf-vertical ul {
+	left: -100%;
+	top: 0;
+	margin:0 -5px;
+}
+.sf-vertical > li {
+  float: none;
+}
+.sf-vertical li {
+  width: 100%;
+}
+
+/*** alter arrow directions ***/
+.sf-vertical.sf-arrows > li > .sf-with-ul:after { 
+  	margin-top: -5px;
+  	margin-right: -3px;
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent; 
+	border-right:6px solid #fff; 
+}
+.sf-vertical.sf-arrows li > .sf-with-ul:focus:after,
+.sf-vertical.sf-arrows li:hover > .sf-with-ul:after,
+.sf-vertical.sf-arrows .sfHover > .sf-with-ul:after {
+  border-right-color: white;
+}

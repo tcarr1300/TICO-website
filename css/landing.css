@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.landingcontent {
+	min-height: 500px;
+	width:100%;
+}
+.corphalf {
+	display:inline-block;
+	float:left;
+	width:50%;	
+	background-image:url(images/landingcorp.png);
+}
+.tractorhalf {
+	display:inline-block;
+	float:left;
+	width:50%;	
+	background-image:url(images/landingtractor.png);
+}
+.button {
+	margin: 150px 50px 0 50px;
+	background-color:rgba(110,110,110,0.8);
+	border-radius: 17px;
+	border-style: solid;
+	-webkit-box-shadow: 2px 3px 9px;
+	box-shadow: 2px 3px 9px;
+}
+.button a {
+	display: block;
+	color: #DFDFDF;
+	padding: 20px 0 20px 0;
+	font-weight: 900;
+	font-size: 23px;
+	text-align: center;
+}
+.button a:hover{
+	color: #000;
+	font-weight: 900;
+}
+.button:hover {
+	background-color:rgba(178,178,178,0.80)
+}

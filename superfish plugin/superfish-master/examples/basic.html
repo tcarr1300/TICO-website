@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+
+		<link rel="stylesheet" href="../dist/css/superfish.css" media="screen">
+        <link rel="stylesheet" media="screen" href="../dist/css/superfish-vertical.css">
+        
+		<style> body { max-width: 40em; background-color:#666; } </style>
+        
+		<script src="../dist/js/jquery.js"></script>
+		<script src="../dist/js/hoverIntent.js"></script>
+		<script src="../dist/js/superfish.js"></script>
+		<script>
+		(function($){ //create closure so we can safely use $ as alias for jQuery
+			$(document).ready(function(){
+				// initialise plugin
+				var example = $('#example').superfish({
+					//add options here if required
+				});
+				// buttons to demonstrate Superfish's public methods
+				$('.destroy').on('click', function(){
+					example.superfish('destroy');
+				});
+				$('.init').on('click', function(){
+					example.superfish();
+				});
+				$('.open').on('click', function(){
+					example.children('li:first').superfish('show');
+				});
+				$('.close').on('click', function(){
+					example.children('li:first').superfish('hide');
+				});
+			});
+		})(jQuery);
+		</script>
+	</head>
+	<body>
+		<ul class="sf-menu sf-vertical" id="example">
+			<li class="current">
+				<a href="followed.html">Terminal Investment Corp.</a>
+			</li>
+			<li>
+				<a href="followed.html">Parts Manuals</a>
+			</li>
+			<li>
+				<a href="followed.html">Spec Sheets</a>
+				<ul>
+					<li>
+						<a href="followed.html">On-Road Spec Sheet</a>
+					</li>
+					<li>
+						<a href="followed.html">Off-Road Spec Sheet</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="followed.html">Brochures</a>
+               <ul>
+					<li>
+						<a href="followed.html">English Brochure</a>
+					</li>
+					<li>
+						<a href="followed.html">Spanish Brochure</a>
+					</li>
+				</ul>
+			</li>	
+		</ul>
+
+<!-- initialise Superfish -->
+<script>
+
+	jQuery(document).ready(function(){
+		jQuery('ul.sf-menu').superfish({
+			animation: {height:'show'},	// slide-down effect without fade-in
+			delay:		 1200			// 1.2 second delay on mouseout
+		});
+	});
+
+</script>
+	</body>
+</html>

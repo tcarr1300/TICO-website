@@ -1,0 +1,117 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: right;
+	margin-bottom: 1em;
+}
+.sf-menu ul {
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu a {
+	border-bottom: 1px solid #f15a22;
+	border-top: 1px solid #f15a22;
+	padding: 4px 18px;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+.sf-menu a {
+	color: #FFF;
+}
+
+.sf-menu a:hover {
+	color: #333;
+}
+.sf-menu li {
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+	margin-bottom:6px;
+}
+.sf-menu ul li {
+	color: #333;
+	background: #747474;
+}
+.sf-menu ul ul li {
+	color: #333;
+	background: #747474;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: #999;
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 2px;
+	  	margin-top: -5px;
+  	margin-right: -3px;
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent; 
+	border-right:6px solid #fff; 
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
