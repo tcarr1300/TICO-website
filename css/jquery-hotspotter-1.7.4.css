@@ -1,0 +1,192 @@
+/*
+ * Title                   : Hotspotter - styles
+ * Author                  : Basm , aka z-B
+ * Version                 : 1.7.4
+ * Last Modified           : 27 Feb 2013
+ * CodeCanyon Profile      : http://codecanyon.net/user/z-B
+ * License                 : http://codecanyon.net/licenses/regular_extended
+ */
+.hs-area {
+    position: relative;
+}
+
+.hs-wrap , .tt-wrap {
+    position: absolute;
+    display: none;
+}
+
+.tt-wrap {
+    border: 10px solid transparent;
+    z-index: 1000;
+}
+
+.tt-wrap.left {
+    top: -2px;
+    right: 100%;
+}
+
+.tt-wrap.right {
+    top: -2px;
+    left: 100%;
+}
+
+.tt-wrap.top {
+    bottom: 100%;
+    left:-2px;
+}
+
+.tt-wrap.bottom {
+    top: 100%;
+    left:-2px;
+}
+
+/*======================= Spots =======================*/
+.invisible-spot , .red-spot  , .onhover-spot {
+    background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+.red-spot {
+    border:2px solid #ff0000;
+    opacity: .7;
+    box-shadow: 0 0 10px #000000;
+}
+
+.red-spot.active {
+    box-shadow: 0 0 5px #FF0D0D inset;
+    border-color: #FF0D0D;
+    opacity: .6;
+}
+/*----- Shadow spot -----*/
+.shadow-spot {
+    box-shadow: 0 0 20px #000000;
+}
+
+.shadow-spot.active {
+    box-shadow: 0 0 50px #000000;
+}
+/*----- Glass spot -----*/
+.glass-spot {
+    box-shadow: 0 0 20px #ffffff;
+}
+
+.glass-spot.active {
+    box-shadow: 0 0 50px #ffffff;
+}
+
+.onhover-spot {
+    border:2px solid transparent;
+}
+.onhover-spot.active {
+    border:2px solid #ff0000;
+    opacity: .7;
+    box-shadow: 0 0 10px #000000;
+}
+/* Custom image & mark up spots*/
+.img-spot img:last-child , .markup-spot div:last-child{
+    display: none;
+}
+/*======================= Tooltips =======================*/
+.tip-tooltip {
+    display: block;
+    border-radius: 8px;
+    padding: 5px 10px 20px 20px;
+    min-height: 20px;
+    min-width: 30px;
+    background-color: #666666;
+    color: #ffffff;
+    box-shadow: 0 0 10px #000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:700;
+}
+
+.tip-tooltip:before {
+    content: "";
+    position: absolute;
+    border: 8px solid;
+    width: 0px;
+    height: 0px;
+    z-index: 999;
+}
+
+.tip-tooltip.transparent {
+    opacity: .8;
+}
+
+/*------ black 'default background color' dirs------*/
+.tip-tooltip.right:before {
+    top: 10px;
+    right:100%;
+    border-color: transparent #666666 transparent transparent;
+}
+.tip-tooltip.left:before {
+    top: 10px;
+    left:100%;
+    border-color: transparent transparent transparent #666666;
+}
+.tip-tooltip.top:before {
+    top: 100%;
+    left: 12px;
+    border-color: #666666 transparent transparent transparent;
+}
+.tip-tooltip.bottom:before {
+    bottom: 100%;
+    left: 12px;
+    border-color: transparent transparent #666666 transparent;
+}
+
+/*------ white ------*/
+.tip-tooltip.white {
+    background-color: #ffffff;
+    color: #000000;
+}
+.tip-tooltip.white.right:before {
+    border-color: transparent #ffffff transparent transparent;
+}
+.tip-tooltip.white.left:before {
+    border-color: transparent transparent transparent #ffffff;
+}
+.tip-tooltip.white.top:before {
+    border-color: #ffffff transparent transparent transparent;
+}
+.tip-tooltip.white.bottom:before {
+    border-color: transparent transparent #ffffff transparent;
+}
+
+
+/*aim handler styles*/
+.aim-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 6px;
+}
+.aim-tooltip .tt-content {
+    display: none;
+}
+.aim-tooltip.top {
+    border-radius: 10px 10px 0 0;
+}
+.aim-tooltip.right {
+    border-radius: 0 10px 10px 0;
+}
+.aim-tooltip.bottom {
+    border-radius: 0 0 10px 10px;
+}
+.aim-tooltip.left {
+    border-radius: 10px 0 0 10px;
+}
+.hs-aim-rect , .hs-aim-pillar {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    opacity: .75;
+    z-index: 1000;
+}
+.hs-aim-pillar {
+    opacity: .2;
+    z-index: 1001;
+    background-color: #ffffff; 
+}
+.hs-flatten {
+    border-radius: 0 !important;
+}
